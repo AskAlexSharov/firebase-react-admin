@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
+import fire from "./../config/app";
 import { useCollection } from "react-firebase-hooks/firestore";
-import firebase from "./fire";
 
-const campaigns = firebase.firestore().collection("campaigns");
+const campaigns = fire.firestore().collection("campaigns");
 
 function Data() {
   const [snapshot, loading, err] = useCollection(campaigns);
